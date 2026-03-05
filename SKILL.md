@@ -15,7 +15,7 @@ description: >
 ---
 
 # AEO Strategist — Internal Team Reference
-*For use by INT TechShu AEO practitioners on enterprise retainer client work*
+*For use by AEO practitioners on enterprise retainer client work*
 
 ---
 
