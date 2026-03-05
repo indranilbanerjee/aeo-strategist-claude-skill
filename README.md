@@ -7,223 +7,284 @@ Built by **[Indranil "Neel" Banerjee](https://linkedin.com/in/indranilbanerjee)*
 
 ---
 
-## Why This Exists
+## What This Skill Is — and What It Is Not
 
-30–50% of informational search queries in 2025 never reach a website. They get answered directly inside ChatGPT, Gemini, Perplexity, or Copilot. If your client's brand isn't being cited in those AI answers — they're invisible to a fast-growing segment of their audience.
+This is a **prompt file**. It loads into Claude's context and instructs Claude to behave as a specialist AEO strategist. It generates frameworks, content briefs, schema markup, strategies, reports, and canonical descriptions — based on information you provide combined with Claude's training knowledge of AEO, platforms, and industry compliance.
 
-**SEO gets you ranked. AEO gets you cited.**
+### What the skill cannot do
 
-This skill gives Claude everything it needs to run an enterprise AEO practice:
-- Deep compliance knowledge for regulated industries (Pharma, BFSI, Healthcare)
-- Trust signal hierarchies per vertical — what AI actually weights, not what people assume
-- Measurement systems for something with no Search Console equivalent
-- Production-ready outputs: schema, content briefs, llms.txt, query libraries, PR briefs
-- Complete retainer delivery workflow from client onboarding to monthly reporting
+**It cannot query AI platforms.** The skill has no ability to open ChatGPT, Gemini, or Perplexity and check what those platforms return for a query. That is platform-locked. No prompt file can do it.
+
+**It cannot check your client's robots.txt, GA4, or Wikidata** on its own. It tells you what to check and how to act on what you find. You do the checking.
+
+**`/research` is a web search mode** — it searches publicly available web pages (news, directories, G2, LinkedIn, Wikidata). It does not test AI platforms.
+
+### The right mental model
+
+You bring observations. The skill structures them into strategy and production outputs.
+
+**You bring:** what you see when you manually test AI platforms, your GA4 numbers, robots.txt findings, directory coverage, competitive observations.  
+**The skill generates:** strategy, content briefs, schema, tracking templates, reports — compliance-aware and structured.
 
 ---
 
-## 16 Modes — What You Can Do
+## Why This Still Saves Enormous Time
+
+Even without execution capability, this is where the value sits:
+
+- A compliant content brief for a Pharma client that takes a senior strategist 2 hours → 5 minutes
+- Valid physician JSON-LD with NMC and NABH stacking → 3 minutes
+- A structured competitive gap analysis from your manual observations → 8 minutes
+- A monthly SOV report formatted for a CMO, from the numbers you paste in → 6 minutes
+
+---
+
+## 16 Modes
 
 | Mode | What It Produces |
 |------|-----------------|
-| `/audit` | Full AEO readiness assessment — 5 categories, gap list P1/P2/P3, compliance section |
+| `/audit` | Gap assessment structured from your manual observations — P1/P2/P3 priorities, compliance section |
 | `/strategy` | Layer A (parametric, 12–24mo) + Layer B (RAG, immediate) full strategy |
 | `/roadmap` | Week-by-week 20-week implementation plan |
-| `/onboard` | New client intake — 7-section checklist, quick wins, first deliverable timeline |
-| `/competitor` | 5-signal competitive footprint map + displacement strategy with timeline |
-| `/brief` | 8-element AEO-optimized content brief ready for writers |
-| `/rewrite` | Restructure existing content for AI extraction |
-| `/schema` | Valid JSON-LD with stacked types + entity linking — copy-paste ready |
+| `/onboard` | New client intake checklist + first-month deliverable schedule |
+| `/competitor` | Competitive gap map structured from your observations + displacement path |
+| `/brief` | 8-element AEO-optimized content brief for writers |
+| `/rewrite` | Restructure existing content (which you paste in) for AI extraction |
+| `/schema` | Valid JSON-LD ready to copy-paste into the page `<head>` |
 | `/llms-txt` | Complete llms.txt under 500 words, ready to deploy |
-| `/query-library` | 30+ tracked queries across 3 intent tiers for SOV measurement |
-| `/canonical` | Canonical brand description for cross-platform entity consolidation |
-| `/report` | Monthly AEO performance report — client-ready |
-| `/track` | GA4 setup, SOV baseline protocol, 6-layer measurement system |
+| `/query-library` | 30+ tracked queries across 3 intent tiers — your manual testing list |
+| `/canonical` | Canonical brand description to deploy identically across all platforms |
+| `/report` | Monthly AEO report for clients — you paste in the data, skill formats it |
+| `/track` | SOV snapshot template + GA4 setup instructions + manual testing protocol |
 | `/pr-brief` | PR outreach plan targeting AI-licensed publications by vertical + market |
-| `/research` | Live web search — what AI says about any brand right now |
+| `/research` | Web search — public coverage, directories, entity signals (not AI platform results) |
 | `/explainer` | AEO business case for CMO/CEO — no jargon, honest timelines |
 
 ---
 
-## Real-World Scenarios
+## How to Use Each Mode — Real Scenarios
 
-### Scenario 1: Pharma Client — "Why aren't we in AI answers?"
+### Before Any Mode: Set Client Context
 
-**Client:** Mankind Pharma (Indian OTC pharma)  
-**Problem:** User asks *"best OTC medicine for mild fever India"* — Crocin and Himalaya appear. Mankind doesn't.
-
-**Step 1 — Check what AI is actually saying right now:**
 ```
-/research
-Brand: Mankind Pharma
-Category: OTC medicines India — fever, pain, digestive health
-Competitors: Cipla OTC, Himalaya, Sun Pharma OTC
+Client: Fibe (formerly EarlySalary)
+Industry: BFSI — Fintech lending (NBFC)
+Market: India
+Business model: B2C consumer loans
+Competitive position: Challenger (vs CASHe, KreditBee)
+AEO maturity: Zero
+Goal today: Understand why we don't appear in AI answers and build a plan
 ```
 
-Claude searches live and returns:
-> *"ChatGPT cites Cipla via a 2024 Moneycontrol article and Himalaya via their structured OTC product pages. Mankind appears in 1 of 5 test queries via an old 2022 Pharmabiz article. Three primary gaps: CCBot likely blocked in robots.txt (removing them from AI training data), no Wikidata entity entry, no structured disease-state content."*
+Claude carries this context forward through all mode calls in the session.
 
-**Step 2 — Full audit:**
+---
+
+### Scenario 1: Pharma Client — Audit + Brief
+
+**Client:** Mankind Pharma (OTC consumer health, India)  
+**Prerequisite — you manually test first:**
+- Open Gemini: type *"best OTC medicine for mild fever India"* — record which brands appear, which sources are cited
+- Check `mankind.in/robots.txt` — is CCBot blocked?
+- Check Wikidata — does an entry exist?
+- Check 1mg/Practo/Apollo — are OTC products listed with disease-state categorisation?
+
+**Then run the audit, bringing your findings:**
+
 ```
 /audit
 Client: Mankind Pharma
 Vertical: Pharma (OTC consumer health)
 Market: India
-Competitive position: Established
 Competitors: Cipla OTC, Himalaya, Sun Pharma
-Note: Website appears to be React SPA — suspect no server-side rendering
+
+What I checked manually:
+- Gemini "best OTC fever medicine India": Crocin and Himalaya appear.
+  Mankind not mentioned. Both cited via structured product pages.
+- ChatGPT same query: Cipla paracetamol cited via Netmeds article.
+  Mankind not mentioned.
+- robots.txt: CCBot blocked. GPTBot blocked.
+- Wikidata: No Mankind Pharma entry found.
+- 1mg: Products listed but no disease-state categorisation.
+- Website: React SPA, no server-side rendering detected.
 ```
 
-Produces 5-category assessment with compliance section that flags:
-> *"⚠️ CDSCO: OTC content only for consumer-facing pages. Schedule H prescription drugs must never appear with efficacy claims. Medico-legal review required before any content goes live."*
+**What Claude produces — structured from your observations:**
+- 5-category gap assessment with P1/P2/P3 priority list
+- Technical fixes ranked by effort/impact (CCBot unblock = P1, 30 mins)
+- ⚠️ CDSCO compliance section: OTC content only, Schedule H drugs must never carry efficacy claims, medico-legal review required before any content goes live
 
-**Step 3 — Generate the first content brief:**
+**Then generate the content brief:**
+
 ```
 /brief
 Client: Mankind Pharma
 Topic: What are safe OTC options for mild fever in adults?
 Audience: General consumer, tier-2 India
-Compliance: CDSCO — OTC only, include standard disclaimer, no Rx drug mention
+Compliance: CDSCO — OTC only, standard disclaimer, no Rx drug mention
 Target: Gemini primary, ChatGPT secondary
 ```
 
-Output includes answer-first opener, 6 FAQ pairs at 40–60 words each, grounding hooks with CDSCO-compliant references, schema recommendation (MedicalWebPage + FAQPage), and a hard compliance flag:
-> *"Do not reference Dolo 650 — it is Schedule H1. Confirm medico-legal clearance before publishing."*
+Output: Answer-first opener, 6 FAQ pairs, 3 grounding hooks, schema recommendation, and a hard compliance flag flagging any Schedule H reference risks. Goes to your writers, then through the client's medico-legal team before publishing.
 
 ---
 
-### Scenario 2: Fintech Startup — Competitor owns every AI answer
+### Scenario 2: Fintech — Competitor Analysis
 
-**Client:** Fibe (formerly EarlySalary — instant personal loans, India)  
-**Problem:** *"Best instant loan app India"* returns CASHe, KreditBee, MoneyTap. Fibe doesn't appear.
+**Client:** Fibe vs CASHe  
+**Prerequisite — you check manually:**
+- Open Perplexity: type *"best instant loan app India"* — does CASHe appear? What source does Perplexity cite?
+- Check BankBazaar: review count for CASHe vs Fibe (publicly visible)
+- Check Wikidata: does CASHe have an entry? Does Fibe?
 
-**Run competitor analysis:**
+**Then run competitor analysis, supplying your observations:**
+
 ```
 /competitor
 Client: Fibe (formerly EarlySalary)
 Competitor: CASHe
 Market: India
 Vertical: BFSI — Fintech lending (NBFC)
+
+My observations:
+- Perplexity "best instant loan app India": CASHe appears via
+  BankBazaar and a recent Moneycontrol roundup. Fibe not mentioned.
+- BankBazaar: CASHe ~290 reviews, profile 100% complete.
+  Fibe ~18 reviews, profile ~60% complete, no EMI calculator.
+- Wikidata: CASHe has an entry. Fibe has none.
+- Content: CASHe blog has ~14 recent loan-topic articles.
+  Fibe blog: 3 articles, none structured answer-first.
+- Earned media: CASHe has 3 Inc42 articles in past year. Fibe: none recent.
 ```
 
-**Output:**
+**What Claude produces — structured from what you reported:**
 ```
 COMPETITIVE FOOTPRINT MAP: CASHe vs Fibe
-─────────────────────────────────────────
-Signal 1 — Technical:     EQUAL. Both indexed. Both have basic schema.
-Signal 2 — Content:       CASHe WINS. 14 answer-first loan articles.
-                          Fibe has 3, none structured for AI extraction.
-Signal 3 — Entity:        CASHe WINS. Wikidata entry (QID Q116486229).
-                          Wikipedia redirect exists. Fibe: neither.
-Signal 4 — Earned media:  EQUAL. Both covered in Moneycontrol + ET.
-Signal 5 — Directories:   CASHe WINS. BankBazaar profile 100% complete.
-                          Fibe profile: 60% complete, no EMI calculator.
 
-STRONGEST ANCHOR: Wikidata + Wikipedia entity presence.
+Signal 1 — Technical crawlability: [Based on what you reported]
+Signal 2 — Content extraction:     CASHe leads per your count.
+                                    14 articles vs 3. Fibe content
+                                    not structured for AI extraction.
+Signal 3 — Entity authority:        CASHe leads per your check.
+                                    Wikidata confirmed. Fibe absent.
+Signal 4 — Earned media recency:    CASHe leads per your finding.
+                                    3 articles in past year vs none.
+Signal 5 — Directory completeness:  CASHe leads per your check.
+                                    BankBazaar 100%, 290+ reviews.
+                                    Fibe 60%, 18 reviews.
 
-FASTEST DISPLACEMENT PATH:
-1. Create Wikidata entry for Fibe [2–4 hours]
+STRONGEST ANCHOR driving CASHe citations (per your Perplexity test):
+BankBazaar profile completeness + recent earned media. Perplexity
+is pulling from BankBazaar for this query.
+
+DISPLACEMENT PATH:
+1. Create Wikidata entry for Fibe [2–4 hours — P1]
 2. Complete BankBazaar profile + 50 new reviews [4 weeks]
-3. Publish 8 answer-first personal loan articles [4–6 weeks]
-→ Perplexity citation: 6–8 weeks. ChatGPT parametric: 12+ months.
+3. Publish 8 answer-first loan articles [4–6 weeks]
+→ Expected: Perplexity RAG change visible 6–8 weeks after sources
+  are indexed. ChatGPT parametric: 12+ months — tell client upfront.
 ```
 
-**Lock the brand entity with `/canonical`:**
+**Then lock the brand entity:**
+
 ```
 /canonical
 Client: Fibe (formerly EarlySalary)
-Category: Instant personal loan app for salaried professionals
 Key facts: RBI-registered NBFC, 35L+ loans disbursed, avg disbursal
   under 8 minutes, credit limit up to ₹5 lakh, founded 2015 Pune
 ```
 
-Output is one paragraph deployed identically to website About, Wikidata, LinkedIn, BankBazaar, Crunchbase — everywhere. Identical wording is what builds entity coherence.
+Output: One canonical paragraph to deploy identically to website About, Wikidata, LinkedIn, BankBazaar, Crunchbase. Identical wording everywhere — variation fragments the entity in AI systems.
 
 ---
 
-### Scenario 3: Real Estate — Hyperlocal + Bengali AEO
+### Scenario 3: Real Estate — Schema + Bengali AEO
 
-**Client:** Ambuja Neotia Group (premium Kolkata developer)  
-**Insight:** Bengali real estate queries are completely unoptimized. Near-zero competition.
+**Client:** Ambuja Neotia Group (Kolkata, premium developer)
+
+**Prerequisite — test Bengali queries manually:**  
+Open Gemini, type *"রাজারহাটে ফ্ল্যাট কিনতে চাই"* — does any coherent Bengali real estate content appear? If your test confirms near-zero optimised Bengali answers, you have a first-mover opportunity — but verify before briefing writers.
+
+**Generate schema with HIRA compliance:**
+
+```
+/schema
+Client: Ambuja Neotia
+Page: "The Condor" luxury apartments
+Location: Action Area II, Rajarhat New Town, Kolkata 700156
+HIRA: HIRA/P/NOR/2023/000XXX
+Price: ₹1.8 Cr – ₹3.5 Cr | Units: 180 | 3BHK + 4BHK
+Status: Under construction
+```
+
+Output: Valid JSON-LD with HIRA number in `hasCredential`, address at locality level for hyperlocal geo-signal.  
+⚠️ Compliance note included: "Do not commit possession date as a schema value — use 'expected December 2026' in description field until HIRA schedule is confirmed."
+
+**Query library with Bengali variants:**
 
 ```
 /query-library
-Client: Ambuja Neotia | Market: Kolkata | Include: Bengali variants
+Client: Ambuja Neotia
+Market: Kolkata
+Include: Bengali language variants
 ```
 
-**Output includes:**
-```
-DECISION-STAGE (track on Gemini):
-• "Ambuja Neotia HIRA registered Kolkata"
-• "luxury apartments Rajarhat New Town price 2025"
-
-BENGALI VARIANTS — first-mover opportunity:
-• "রাজারহাটে ফ্ল্যাট কিনতে চাই"   [Want to buy flat in Rajarhat]
-• "আম্বুজা নিওটিয়া নতুন প্রজেক্ট" [Ambuja Neotia new project]
-• "কলকাতায় বাড়ি কেনা গাইড"        [Guide to buying home in Kolkata]
-
-NOTE: Gemini supports Bengali AI Overviews. These have near-zero
-optimized competition. First structured Bengali content wins and
-holds position for 12+ months.
-```
+Output: 35+ queries across 3 tiers including Bengali variants — this is your monthly manual testing list, not automated monitoring.
 
 ---
 
-### Scenario 4: B2B SaaS — Breaking into US Market
+### Scenario 4: B2B SaaS — Audit Surfaces Real Blockers
 
-**Client:** Leena AI (HR automation SaaS)  
-**Key audit finding:**
+**Client:** Leena AI (HR automation, US market)
+
+**Prerequisite — manual checks:**
+- Open Perplexity: type *"best HR automation software 2025"* — does Leena AI appear? What does Perplexity cite?
+- Check G2: Leena AI review count vs ServiceNow (publicly visible on g2.com)
+- Run `site:docs.leena.ai` in Bing — is documentation indexed?
+- Check r/humanresources on Reddit — any organic Leena AI mentions?
+
+**Run audit with your findings:**
+
 ```
 /audit
 Client: Leena AI
 Vertical: SaaS-Tech (HR automation)
-Market: US
+Market: US primary + India secondary
+Certifications: SOC 2 Type II, ISO 27001, GDPR
+
+What I checked:
+- Perplexity "best HR automation software": ServiceNow and Moveworks
+  appear. Perplexity cites Gartner MQ page and G2 category listing.
+  Leena AI not mentioned.
+- G2: Leena AI has 47 reviews. ServiceNow 4,200+. Leena AI is
+  "High Performer" not "Leader".
+- Bing site:docs.leena.ai — documentation not indexed.
+- Reddit r/humanresources: No Leena AI organic mentions found.
 ```
 
-> *"G2 profile has 47 reviews. ServiceNow has 4,200+. AI systems treat G2 review volume as a proxy for market legitimacy. A 90-day G2 review drive targeting 100 reviews directly shifts Perplexity citation behavior — Perplexity reads G2 as a trusted source.*
-> 
-> *Reddit gap: No presence on r/humanresources (340K members). OpenAI has a licensing deal with Reddit — this directly affects ChatGPT parametric responses."*
+**What the audit identifies from your data:**
+> *"Perplexity is citing G2's category page (per your test). At 47 reviews, Leena AI doesn't appear in G2's 'top products' section — that is what Perplexity extracts. A 90-day G2 review drive targeting 100 reviews is the fastest single action to shift Perplexity citation behaviour. docs.leena.ai not indexed in Bing means it's invisible to Bing-grounded ChatGPT. Submit to Bing Webmaster Tools today."*
 
 ---
 
-### Scenario 5: Healthcare — Doctor Profiles Drive AI Citations
+### Scenario 5: Healthcare — Doctor Profiles + Compliance
 
 **Client:** Manipal Hospitals  
-**Insight:** Named clinicians with verifiable credentials outperform hospital brand claims in AI answers.
+**Key principle:** Named clinicians with verifiable credentials are the #1 AI trust signal for healthcare. Doctor profiles come before any other content type.
 
 ```
 /schema
 Client: Manipal Hospitals
-Page: Physician profile — Dr. Ramesh Babu, Senior Interventional Cardiologist
-Qualifications: MBBS Manipal, MD Cardiology, DM AIIMS Delhi, Fellowship Cleveland Clinic
+Page type: Physician profile
+Doctor: Dr. Ramesh Babu — Senior Interventional Cardiologist
+Qualifications: MBBS Manipal, MD Cardiology, DM AIIMS Delhi,
+  Fellowship Cleveland Clinic
 NMC Registration: Karnataka Medical Council #XXXXX
 Experience: 22 years, 5000+ cardiac procedures
+Hospital: Manipal Hospital, Old Airport Road, Bangalore
 ```
 
-**Output — copy-paste ready JSON-LD:**
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Physician", "Person"],
-  "name": "Dr. Ramesh Babu",
-  "jobTitle": "Senior Interventional Cardiologist",
-  "worksFor": {
-    "@type": "Hospital",
-    "name": "Manipal Hospitals",
-    "hasCredential": {"@type": "EducationalOccupationalCredential",
-                      "credentialCategory": "NABH Accreditation"}
-  },
-  "hasCredential": [
-    {"@type": "EducationalOccupationalCredential",
-     "credentialCategory": "DM Cardiology",
-     "recognizedBy": {"@type": "Organization", "name": "AIIMS Delhi"}},
-    {"@type": "EducationalOccupationalCredential",
-     "name": "NMC Registration", "identifier": "KMC-XXXXX"}
-  ],
-  "medicalSpecialty": "Interventional Cardiology",
-  "sameAs": ["https://www.practo.com/bangalore/doctor/dr-ramesh-babu"]
-}
-```
+Output — copy-paste ready JSON-LD with stacked Physician + Person schema, NABH credential in `worksFor`, NMC registration in `hasCredential`. Validate in Rich Results Test before deploying.
 
 ---
 
@@ -240,7 +301,7 @@ Experience: 22 years, 5000+ cardiac procedures
 3. Load the relevant industry + market file
 4. Set client context, run any mode
 
-### Option 3 — API / Code
+### Option 3 — API
 ```python
 import anthropic
 from pathlib import Path
@@ -258,7 +319,7 @@ def load_skill(base_path, industry, market):
 
 client = anthropic.Anthropic()
 response = client.messages.create(
-    model="claude-opus-4-5",
+    model="claude-opus-4-5",   # sonnet-4-6 for /brief, /schema, /rewrite
     max_tokens=4096,
     system=load_skill("./aeo-strategist", "pharma", "india"),
     messages=[{"role": "user", "content": """/audit
@@ -266,12 +327,16 @@ Client: Cipla Limited
 Vertical: Pharma (OTC + branded generics)
 Market: India
 Competitive position: Established
-AEO maturity: Zero"""}]
+
+What I checked manually:
+- [paste your platform test observations here]
+- [robots.txt findings]
+- [Wikidata check]"""}]
 )
 print(response.content[0].text)
 ```
 
-**Model guide:** `claude-opus-4-5` for `/audit`, `/strategy`, `/competitor`, `/report` — `claude-sonnet-4-6` for `/brief`, `/schema`, `/rewrite`, `/canonical`
+Note: The API code formats and structures your audit inputs. The actual platform testing (opening ChatGPT, Gemini, Perplexity and recording what they return) is manual work done before calling the API.
 
 ---
 
@@ -280,13 +345,13 @@ print(response.content[0].text)
 ```
 aeo-strategist/
 ├── SKILL.md                    ← Main brain — always load this
-├── USAGE_GUIDE.md              ← Complete guide with all scenarios (start here)
+├── USAGE_GUIDE.md              ← Complete guide with full scenarios (start here)
 ├── industries/                 ← Load only what your client needs
-│   ├── pharma.md               CDSCO/FDA/EMA + 8 sub-verticals
+│   ├── pharma.md               CDSCO/FDA/EMA compliance + 8 sub-verticals
 │   ├── bfsi.md                 SEBI/RBI/IRDAI/FCA/SEC + 9 sub-verticals
 │   ├── healthcare.md           NABH/JCI/NMC/CQC
 │   ├── real-estate.md          RERA/HIRA, hyperlocal, vernacular India
-│   ├── saas-tech.md            G2/Gartner, SOC 2, DPDP Act, Reddit
+│   ├── saas-tech.md            G2/Gartner, SOC 2, DPDP Act, Reddit strategy
 │   ├── retail-ecommerce.md     BIS mandatory, FSSAI, Google Shopping
 │   ├── edtech.md               UGC/AICTE/NAAC
 │   ├── legal-professional.md   Bar Council, ICAI, advertising rules
@@ -321,41 +386,42 @@ aeo-strategist/
 ## Monthly Retainer Rhythm
 
 ```
-WEEK 1 — MEASURE
-  SOV snapshot: 20 queries × 3 platforms × 3 tests
-  GA4 AI referral channel review | GSC branded search trend
+WEEK 1 — MEASURE (you do this manually)
+  Open ChatGPT, Gemini, Perplexity — type each tracked query — record results
+  Pull GA4 AI referral channel | Check GSC branded search trend
 
-WEEK 2 — PRODUCE
-  2 content pieces (run /brief before each)
-  Schema validation | Directory updates
+WEEK 2 — PRODUCE (skill + you)
+  Run /brief for 2 content pieces → send to writers
+  Validate schema in Rich Results Test | Update directory listings
 
-WEEK 3 — EARN
-  2–3 PR pitches from /pr-brief output
+WEEK 3 — EARN (skill for the brief, you for the outreach)
+  /pr-brief → your team sends the pitches
   Reddit / LinkedIn / Quora community participation
 
-WEEK 4 — REPORT + PLAN
-  /report → internal review → client delivery
-  Queue next month content briefs
+WEEK 4 — REPORT + PLAN (you paste the data, skill formats it)
+  /report with your SOV numbers + GA4 data → client delivery
+  Queue next month content briefs with /brief
 ```
 
-Every quarter: `/audit` refresh + `/competitor` re-run + expand query library.
+Every quarter: `/audit` refresh (with fresh manual tests) + `/competitor` re-run + expand query library.
 
 ---
 
 ## Common Mistakes
 
-| Mistake | Fix |
-|---------|-----|
-| No client context before running modes | Always set 7-field context first — Claude uses it for compliance routing |
-| Promising results in 60 days | RAG: 4–8 weeks. Parametric: 12–18 months. Use `/explainer` to set this on Day 1 |
-| CCBot blocked in robots.txt | P1 fix, 30 minutes, removes brand from AI training data — check every new client Day 1 |
-| GA4 shows zero AI traffic = "AEO failing" | Dark social AI (WhatsApp, Copilot, private ChatGPT) has no traffic trace. Use SOV + branded search |
+| Mistake | Why It Matters | Fix |
+|---------|---------------|-----|
+| Running modes with no manual observations | Generic output with no specificity | Do the platform tests and checks first. Bring the data. |
+| Treating `/competitor` output as independently verified | Every claim traces back to what you told Claude | Verify your observations yourself before including in a client deliverable |
+| Promising results in 60 days | Sets wrong expectations | RAG: 4–8 weeks. Parametric: 12–18 months. Use `/explainer` on Day 1. |
+| CCBot blocked in robots.txt | Removes brand from AI training data | P1 fix, 30 minutes. Check every new client on Day 1. |
+| GA4 shows zero AI traffic = "AEO not working" | WhatsApp AI, Copilot, private ChatGPT leave no GA4 trace | SOV snapshot + GSC branded search are the right proxies |
 
 ---
 
-## Read the Full User Guide
+## Read the Full Guide
 
-**→ [USAGE_GUIDE.md](./USAGE_GUIDE.md)** — complete walkthroughs, all 5 client scenarios fully expanded, every mode with exact inputs + sample outputs, team roles, Python API examples, 20+ FAQs.
+**→ [USAGE_GUIDE.md](./USAGE_GUIDE.md)** — complete walkthroughs for all 5 client scenarios, every mode with exact inputs and sample outputs, team structure, API examples, common mistakes in detail, 20+ FAQ.
 
 ---
 
