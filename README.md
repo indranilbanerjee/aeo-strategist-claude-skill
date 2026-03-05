@@ -1,117 +1,228 @@
 # AEO Strategist — Claude Cowork Skill
 
-> **Enterprise Answer Engine Optimization (AEO) for Claude.**  
-> A production-grade skill for SEO/AEO practitioners managing retainer clients across industries and global markets.
+> **The first open-source enterprise AEO skill for Claude.**  
+> Turn Claude into a fully-equipped Answer Engine Optimization strategist — with deep compliance awareness, 12 industry verticals, and 8 global markets built in.
 
-Built by **[Indranil "Neel" Banerjee](https://linkedin.com/in/indranilbanerjee)** — Head of AI Transformation, INT TechShu Digital.
+Built by **[Indranil "Neel" Banerjee](https://linkedin.com/in/indranilbanerjee)** — Head of AI Transformation, [INT TechShu Digital](https://inttechshu.com).
 
 ---
 
-## What This Skill Does
+## Why This Exists
 
-AEO (Answer Engine Optimization) is the practice of ensuring AI systems — ChatGPT, Gemini, Perplexity, Claude, Copilot — accurately and positively cite your brand in their responses.
+30–50% of informational search queries in 2025 never reach a website. They get answered directly inside ChatGPT, Gemini, Perplexity, or Copilot. If your client's brand isn't being cited in those AI answers — they're invisible to a fast-growing segment of their audience.
 
-This skill turns Claude into a fully-equipped AEO strategist capable of:
+**SEO gets you ranked. AEO gets you cited.**
+
+This skill gives Claude everything it needs to run an enterprise AEO practice:
+- Deep compliance knowledge for regulated industries (Pharma, BFSI, Healthcare)
+- Trust signal hierarchies per vertical — what AI actually weights, not what people assume
+- Measurement systems for something with no Search Console equivalent
+- Production-ready outputs: schema, content briefs, llms.txt, query libraries, PR briefs
+- Complete retainer delivery workflow from client onboarding to monthly reporting
+
+---
+
+## 16 Modes — What You Can Do
 
 | Mode | What It Produces |
 |------|-----------------|
-| `/audit` | Full 5-category AEO readiness audit with P1/P2/P3 gap list |
-| `/strategy` | Layer A (parametric, 12–24mo) + Layer B (RAG, immediate) strategy |
+| `/audit` | Full AEO readiness assessment — 5 categories, gap list P1/P2/P3, compliance section |
+| `/strategy` | Layer A (parametric, 12–24mo) + Layer B (RAG, immediate) full strategy |
 | `/roadmap` | Week-by-week 20-week implementation plan |
+| `/onboard` | New client intake — 7-section checklist, quick wins, first deliverable timeline |
+| `/competitor` | 5-signal competitive footprint map + displacement strategy with timeline |
 | `/brief` | 8-element AEO-optimized content brief ready for writers |
 | `/rewrite` | Restructure existing content for AI extraction |
-| `/schema` | Valid JSON-LD with stacked types + entity linking |
-| `/llms-txt` | Brand's llms.txt file under 500 words |
-| `/query-library` | 30+ tracked queries across 3 intent tiers |
-| `/canonical` | Canonical brand description for cross-platform deployment |
-| `/competitor` | 5-signal competitive footprint map + displacement plan |
-| `/report` | Monthly AEO performance report for clients |
-| `/onboard` | New client intake — full 7-section checklist workflow |
-| `/track` | GA4 setup, SOV baseline, manual query testing protocol |
-| `/pr-brief` | PR outreach plan targeting AI-licensed publications |
-| `/research` | Live web intelligence — what AI says about a brand right now |
-| `/explainer` | AEO business case for CMO/CEO — no jargon |
+| `/schema` | Valid JSON-LD with stacked types + entity linking — copy-paste ready |
+| `/llms-txt` | Complete llms.txt under 500 words, ready to deploy |
+| `/query-library` | 30+ tracked queries across 3 intent tiers for SOV measurement |
+| `/canonical` | Canonical brand description for cross-platform entity consolidation |
+| `/report` | Monthly AEO performance report — client-ready |
+| `/track` | GA4 setup, SOV baseline protocol, 6-layer measurement system |
+| `/pr-brief` | PR outreach plan targeting AI-licensed publications by vertical + market |
+| `/research` | Live web search — what AI says about any brand right now |
+| `/explainer` | AEO business case for CMO/CEO — no jargon, honest timelines |
 
 ---
 
-## Coverage
+## Real-World Scenarios
 
-### 12 Industry Verticals
-Each with deep trust signal hierarchies, compliance constraints by market, full query taxonomy, schema types, and India-specific signals.
+### Scenario 1: Pharma Client — "Why aren't we in AI answers?"
 
-| Vertical | Key Compliance |
-|----------|---------------|
-| 💊 Pharma & Life Sciences | CDSCO, FDA, EMA, ABPI — medico-legal gate required |
-| 🏦 BFSI | SEBI, RBI, IRDAI, FCA, SEC — investment advice rules |
-| 🏥 Healthcare | NABH, NABL, NMC, JCI, CQC |
-| 🏠 Real Estate | RERA (state-wise), PCPNDT, Consumer Protection Act |
-| 🎓 EdTech | UGC, AICTE, NAAC, FTC (US) |
-| ⚖️ Legal & Professional Services | Bar Council, ICAI, SRA |
-| 🏭 Manufacturing | BIS, ISO 9001/14001, REACH, RoHS |
-| 🏨 Hospitality & Travel | FSSAI, Ministry of Tourism, TripAdvisor signals |
-| 🚗 Automotive | ARAI, BNCAP/NCAP, FAME II EV |
-| 💻 SaaS & Tech | GDPR, DPDP Act 2023, SOC 2, ISO 27001 |
-| 🛒 Retail & E-commerce | BIS mandatory, FSSAI, Legal Metrology Act |
-| 📰 Media & Publishing | AI licensing deals, DAVP, Press Council |
+**Client:** Mankind Pharma (Indian OTC pharma)  
+**Problem:** User asks *"best OTC medicine for mild fever India"* — Crocin and Himalaya appear. Mankind doesn't.
 
-### 8 Regional Markets
-Deep files with AI platform landscape, AI-citation-worthy publications, directories by vertical, and regulatory anchors.
+**Step 1 — Check what AI is actually saying right now:**
+```
+/research
+Brand: Mankind Pharma
+Category: OTC medicines India — fever, pain, digestive health
+Competitors: Cipla OTC, Himalaya, Sun Pharma OTC
+```
 
-| Market | Coverage |
-|--------|---------|
-| 🇮🇳 India | All 8 regions, 20+ regulatory bodies, vernacular opportunity guide |
-| 🇺🇸 United States | Reddit strategy, AI Overviews, all major verticals |
-| 🇬🇧 United Kingdom | FCA, CQC, Companies House, post-Brexit notes |
-| 🇦🇪 UAE / MENA | Dubai, Saudi Arabia, Qatar, Arabic AEO opportunity |
-| 🌏 Southeast Asia | Singapore, Indonesia, Malaysia, Philippines, Thailand, Vietnam |
-| 🇪🇺 Europe | Germany, France, Netherlands, EU AI Act compliance |
-| 🇦🇺 Australia & NZ | TGA, ASIC, ABN trust signals |
-| 🌍 Africa | Nigeria, South Africa, Kenya, WhatsApp AI note |
+Claude searches live and returns:
+> *"ChatGPT cites Cipla via a 2024 Moneycontrol article and Himalaya via their structured OTC product pages. Mankind appears in 1 of 5 test queries via an old 2022 Pharmabiz article. Three primary gaps: CCBot likely blocked in robots.txt (removing them from AI training data), no Wikidata entity entry, no structured disease-state content."*
+
+**Step 2 — Full audit:**
+```
+/audit
+Client: Mankind Pharma
+Vertical: Pharma (OTC consumer health)
+Market: India
+Competitive position: Established
+Competitors: Cipla OTC, Himalaya, Sun Pharma
+Note: Website appears to be React SPA — suspect no server-side rendering
+```
+
+Produces 5-category assessment with compliance section that flags:
+> *"⚠️ CDSCO: OTC content only for consumer-facing pages. Schedule H prescription drugs must never appear with efficacy claims. Medico-legal review required before any content goes live."*
+
+**Step 3 — Generate the first content brief:**
+```
+/brief
+Client: Mankind Pharma
+Topic: What are safe OTC options for mild fever in adults?
+Audience: General consumer, tier-2 India
+Compliance: CDSCO — OTC only, include standard disclaimer, no Rx drug mention
+Target: Gemini primary, ChatGPT secondary
+```
+
+Output includes answer-first opener, 6 FAQ pairs at 40–60 words each, grounding hooks with CDSCO-compliant references, schema recommendation (MedicalWebPage + FAQPage), and a hard compliance flag:
+> *"Do not reference Dolo 650 — it is Schedule H1. Confirm medico-legal clearance before publishing."*
 
 ---
 
-## Repository Structure
+### Scenario 2: Fintech Startup — Competitor owns every AI answer
+
+**Client:** Fibe (formerly EarlySalary — instant personal loans, India)  
+**Problem:** *"Best instant loan app India"* returns CASHe, KreditBee, MoneyTap. Fibe doesn't appear.
+
+**Run competitor analysis:**
+```
+/competitor
+Client: Fibe (formerly EarlySalary)
+Competitor: CASHe
+Market: India
+Vertical: BFSI — Fintech lending (NBFC)
+```
+
+**Output:**
+```
+COMPETITIVE FOOTPRINT MAP: CASHe vs Fibe
+─────────────────────────────────────────
+Signal 1 — Technical:     EQUAL. Both indexed. Both have basic schema.
+Signal 2 — Content:       CASHe WINS. 14 answer-first loan articles.
+                          Fibe has 3, none structured for AI extraction.
+Signal 3 — Entity:        CASHe WINS. Wikidata entry (QID Q116486229).
+                          Wikipedia redirect exists. Fibe: neither.
+Signal 4 — Earned media:  EQUAL. Both covered in Moneycontrol + ET.
+Signal 5 — Directories:   CASHe WINS. BankBazaar profile 100% complete.
+                          Fibe profile: 60% complete, no EMI calculator.
+
+STRONGEST ANCHOR: Wikidata + Wikipedia entity presence.
+
+FASTEST DISPLACEMENT PATH:
+1. Create Wikidata entry for Fibe [2–4 hours]
+2. Complete BankBazaar profile + 50 new reviews [4 weeks]
+3. Publish 8 answer-first personal loan articles [4–6 weeks]
+→ Perplexity citation: 6–8 weeks. ChatGPT parametric: 12+ months.
+```
+
+**Lock the brand entity with `/canonical`:**
+```
+/canonical
+Client: Fibe (formerly EarlySalary)
+Category: Instant personal loan app for salaried professionals
+Key facts: RBI-registered NBFC, 35L+ loans disbursed, avg disbursal
+  under 8 minutes, credit limit up to ₹5 lakh, founded 2015 Pune
+```
+
+Output is one paragraph deployed identically to website About, Wikidata, LinkedIn, BankBazaar, Crunchbase — everywhere. Identical wording is what builds entity coherence.
+
+---
+
+### Scenario 3: Real Estate — Hyperlocal + Bengali AEO
+
+**Client:** Ambuja Neotia Group (premium Kolkata developer)  
+**Insight:** Bengali real estate queries are completely unoptimized. Near-zero competition.
 
 ```
-aeo-strategist/
-├── SKILL.md                          ← Main routing brain (load this in Claude)
-├── industries/
-│   ├── pharma.md                     ← 8 sub-verticals, all market compliance
-│   ├── bfsi.md                       ← Banking, insurance, MF, fintech
-│   ├── healthcare.md                 ← Hospitals, diagnostics, healthtech
-│   ├── real-estate.md                ← RERA-first, hyperlocal, vernacular
-│   ├── saas-tech.md                  ← G2, Gartner, SOC 2, DPDP
-│   ├── retail-ecommerce.md           ← D2C, FMCG, BIS, Google Shopping
-│   ├── edtech.md                     ← Test prep, upskilling, universities
-│   ├── legal-professional.md         ← Law firms, CA firms, consulting
-│   ├── manufacturing.md              ← ISO, BIS, export credentials
-│   ├── hospitality-travel.md         ← Hotels, OTAs, F&B, MICE
-│   ├── automotive.md                 ← ARAI, BNCAP, EV, dealerships
-│   ├── media-publishing.md           ← AI licensing, DAVP, creator economy
-│   └── _ADD_NEW_INDUSTRY.md          ← Template to extend the skill
-├── markets/
-│   ├── india.md                      ← Deepest file — tier-2/3, vernacular guide
-│   ├── us.md                         ← Reddit strategy, AI Overviews, all verticals
-│   ├── uk.md                         ← FCA, CQC, Companies House
-│   ├── uae-mena.md                   ← Dubai, KSA, Arabic AEO
-│   ├── sea.md                        ← SG, ID, MY, PH, TH, VN
-│   ├── europe.md                     ← DACH, France, EU AI Act
-│   ├── australia-nz.md               ← TGA, ASIC, ABN signals
-│   ├── africa.md                     ← NG, ZA, KE — WhatsApp AI note
-│   └── _ADD_NEW_MARKET.md            ← Template to extend the skill
-├── references/
-│   ├── eval-criteria.md              ← Quality gates per mode
-│   ├── platform-matrix.md            ← All AI platforms: crawlers, source prefs, checklists
-│   ├── query-taxonomy.md             ← Intent proximity framework + generation rules
-│   ├── tracking-protocols.md         ← 6-layer measurement: SOV, GA4, dark social
-│   ├── onboarding-checklist.md       ← 7-section new client intake SOP
-│   ├── monthly-workflow.md           ← Week-by-week retainer delivery rhythm
-│   ├── pr-targets.md                 ← AI-licensed pubs by tier and market
-│   ├── glossary.md                   ← 50+ terms — for team training
-│   ├── troubleshooting.md            ← 8 common failure patterns + fixes
-│   └── regional-markets.md           ← Legacy reference (superseded by markets/)
-└── evals/
-    └── evals.json                    ← Test cases for skill evaluation
+/query-library
+Client: Ambuja Neotia | Market: Kolkata | Include: Bengali variants
+```
+
+**Output includes:**
+```
+DECISION-STAGE (track on Gemini):
+• "Ambuja Neotia HIRA registered Kolkata"
+• "luxury apartments Rajarhat New Town price 2025"
+
+BENGALI VARIANTS — first-mover opportunity:
+• "রাজারহাটে ফ্ল্যাট কিনতে চাই"   [Want to buy flat in Rajarhat]
+• "আম্বুজা নিওটিয়া নতুন প্রজেক্ট" [Ambuja Neotia new project]
+• "কলকাতায় বাড়ি কেনা গাইড"        [Guide to buying home in Kolkata]
+
+NOTE: Gemini supports Bengali AI Overviews. These have near-zero
+optimized competition. First structured Bengali content wins and
+holds position for 12+ months.
+```
+
+---
+
+### Scenario 4: B2B SaaS — Breaking into US Market
+
+**Client:** Leena AI (HR automation SaaS)  
+**Key audit finding:**
+```
+/audit
+Client: Leena AI
+Vertical: SaaS-Tech (HR automation)
+Market: US
+```
+
+> *"G2 profile has 47 reviews. ServiceNow has 4,200+. AI systems treat G2 review volume as a proxy for market legitimacy. A 90-day G2 review drive targeting 100 reviews directly shifts Perplexity citation behavior — Perplexity reads G2 as a trusted source.*
+> 
+> *Reddit gap: No presence on r/humanresources (340K members). OpenAI has a licensing deal with Reddit — this directly affects ChatGPT parametric responses."*
+
+---
+
+### Scenario 5: Healthcare — Doctor Profiles Drive AI Citations
+
+**Client:** Manipal Hospitals  
+**Insight:** Named clinicians with verifiable credentials outperform hospital brand claims in AI answers.
+
+```
+/schema
+Client: Manipal Hospitals
+Page: Physician profile — Dr. Ramesh Babu, Senior Interventional Cardiologist
+Qualifications: MBBS Manipal, MD Cardiology, DM AIIMS Delhi, Fellowship Cleveland Clinic
+NMC Registration: Karnataka Medical Council #XXXXX
+Experience: 22 years, 5000+ cardiac procedures
+```
+
+**Output — copy-paste ready JSON-LD:**
+```json
+{
+  "@context": "https://schema.org",
+  "@type": ["Physician", "Person"],
+  "name": "Dr. Ramesh Babu",
+  "jobTitle": "Senior Interventional Cardiologist",
+  "worksFor": {
+    "@type": "Hospital",
+    "name": "Manipal Hospitals",
+    "hasCredential": {"@type": "EducationalOccupationalCredential",
+                      "credentialCategory": "NABH Accreditation"}
+  },
+  "hasCredential": [
+    {"@type": "EducationalOccupationalCredential",
+     "credentialCategory": "DM Cardiology",
+     "recognizedBy": {"@type": "Organization", "name": "AIIMS Delhi"}},
+    {"@type": "EducationalOccupationalCredential",
+     "name": "NMC Registration", "identifier": "KMC-XXXXX"}
+  ],
+  "medicalSpecialty": "Interventional Cardiology",
+  "sameAs": ["https://www.practo.com/bangalore/doctor/dr-ramesh-babu"]
+}
 ```
 
 ---
@@ -119,165 +230,143 @@ aeo-strategist/
 ## Installation
 
 ### Option 1 — Claude Cowork (Recommended)
-
-If you use [Claude Cowork](https://claude.ai) with the skills system:
-
 1. Download the `.skill` file from [Releases](../../releases)
-2. Drop it into your Cowork skills folder
-3. Claude will auto-detect and load it
+2. Drop into your Cowork skills folder
+3. Start a session → `/onboard [client name]`
 
-### Option 2 — Manual (Claude.ai or API)
+### Option 2 — Claude.ai
+1. `git clone https://github.com/indranilbanerjee/aeo-strategist-claude-skill.git`
+2. Paste `SKILL.md` contents as your first message in a new Claude conversation
+3. Load the relevant industry + market file
+4. Set client context, run any mode
 
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/indranil21/aeo-strategist-claude-skill.git
-   ```
-
-2. Start a Claude session. Paste the contents of `SKILL.md` as your system prompt, or reference it at the top of your conversation.
-
-3. Load relevant industry and market files as context when needed:
-   ```
-   "Load industries/pharma.md and markets/india.md for this client."
-   ```
-
-### Option 3 — API / Code Integration
-
-Use the files as a structured prompt system in your own application:
-
+### Option 3 — API / Code
 ```python
 import anthropic
+from pathlib import Path
 
-# Load skill files
-with open("SKILL.md") as f:
-    skill_prompt = f.read()
-
-with open("industries/pharma.md") as f:
-    industry_context = f.read()
-
-with open("markets/india.md") as f:
-    market_context = f.read()
+def load_skill(base_path, industry, market):
+    base = Path(base_path)
+    skill = (base / "SKILL.md").read_text()
+    ind_file = base / "industries" / f"{industry.lower().replace(' ','-')}.md"
+    mkt_file = base / "markets" / f"{market.lower().replace(' ','-')}.md"
+    return "\n\n---\n\n".join([
+        skill,
+        ind_file.read_text() if ind_file.exists() else "",
+        mkt_file.read_text() if mkt_file.exists() else ""
+    ])
 
 client = anthropic.Anthropic()
-
 response = client.messages.create(
     model="claude-opus-4-5",
     max_tokens=4096,
-    system=f"{skill_prompt}\n\n---\n\n{industry_context}\n\n---\n\n{market_context}",
-    messages=[{
-        "role": "user",
-        "content": "/audit Client: Cipla | Vertical: Pharma | Market: India | Competitive Position: Established"
-    }]
+    system=load_skill("./aeo-strategist", "pharma", "india"),
+    messages=[{"role": "user", "content": """/audit
+Client: Cipla Limited
+Vertical: Pharma (OTC + branded generics)
+Market: India
+Competitive position: Established
+AEO maturity: Zero"""}]
 )
-
 print(response.content[0].text)
 ```
 
-### Option 4 — MCP Server Integration
-
-For teams running Claude via MCP (Model Context Protocol), you can serve these files as context resources from your MCP server and reference them in tool responses.
+**Model guide:** `claude-opus-4-5` for `/audit`, `/strategy`, `/competitor`, `/report` — `claude-sonnet-4-6` for `/brief`, `/schema`, `/rewrite`, `/canonical`
 
 ---
 
-## Usage Examples
+## Repository Structure
 
-### Run an AEO Audit
 ```
-/audit
-Client: HDFC Bank
-Vertical: BFSI (Retail Banking)
-Market: India
-Competitive Position: Market Leader
-Current AEO Maturity: Zero
-Target Platforms: All
-```
-
-### Generate a Content Brief
-```
-/brief
-Client: Cipla
-Topic: What is the treatment for asthma in adults?
-Target: HCP-facing, India market
-Compliance: CDSCO — disease-state content only, no brand promotion
-```
-
-### Build Schema Markup
-```
-/schema
-Client: Prestige Group
-Page type: Residential project page
-RERA: PRM/KA/RERA/1251/309/PR/171223/006267
-Location: Whitefield, Bangalore
-```
-
-### Run Competitive Intelligence
-```
-/competitor
-Client: Zoho CRM
-Competitor: Salesforce
-Market: India, Mid-market B2B
-```
-
-### Onboard a New Client
-```
-/onboard
-New client: [client name and industry]
+aeo-strategist/
+├── SKILL.md                    ← Main brain — always load this
+├── USAGE_GUIDE.md              ← Complete guide with all scenarios (start here)
+├── industries/                 ← Load only what your client needs
+│   ├── pharma.md               CDSCO/FDA/EMA + 8 sub-verticals
+│   ├── bfsi.md                 SEBI/RBI/IRDAI/FCA/SEC + 9 sub-verticals
+│   ├── healthcare.md           NABH/JCI/NMC/CQC
+│   ├── real-estate.md          RERA/HIRA, hyperlocal, vernacular India
+│   ├── saas-tech.md            G2/Gartner, SOC 2, DPDP Act, Reddit
+│   ├── retail-ecommerce.md     BIS mandatory, FSSAI, Google Shopping
+│   ├── edtech.md               UGC/AICTE/NAAC
+│   ├── legal-professional.md   Bar Council, ICAI, advertising rules
+│   ├── manufacturing.md        ISO, BIS, export credentials
+│   ├── hospitality-travel.md   FSSAI, TripAdvisor, Ministry of Tourism
+│   ├── automotive.md           ARAI, BNCAP, FAME II EV
+│   ├── media-publishing.md     AI licensing deals, DAVP
+│   └── _ADD_NEW_INDUSTRY.md    Template — add any vertical in 30 mins
+├── markets/                    ← Load only the market(s) for your client
+│   ├── india.md                20+ regulators, all directories, vernacular guide
+│   ├── us.md                   Reddit strategy, Gartner, AI Overviews
+│   ├── uk.md                   FCA, Companies House, CQC
+│   ├── uae-mena.md             Dubai, KSA, Qatar, Arabic AEO
+│   ├── sea.md                  SG, ID, MY, PH, TH, VN
+│   ├── europe.md               DACH, France, EU AI Act
+│   ├── australia-nz.md         TGA, ASIC, ABN signals
+│   ├── africa.md               NG, ZA, KE, WhatsApp AI
+│   └── _ADD_NEW_MARKET.md      Template — add any market in 30 mins
+├── references/
+│   ├── tracking-protocols.md   6-layer SOV measurement system
+│   ├── onboarding-checklist.md New client intake SOP
+│   ├── monthly-workflow.md     Week-by-week retainer rhythm
+│   ├── pr-targets.md           AI-licensed publications by tier + market
+│   ├── platform-matrix.md      All AI platforms: crawlers, signals, checklists
+│   ├── glossary.md             50+ terms for team training
+│   └── troubleshooting.md      8 common failures + diagnostic fixes
+└── evals/evals.json
 ```
 
 ---
 
-## Extending the Skill
+## Monthly Retainer Rhythm
 
-### Add a New Industry
-1. Copy `industries/_ADD_NEW_INDUSTRY.md`
-2. Rename to `industries/[your-industry].md`
-3. Fill all 8 sections following the template
-4. Add the industry name to `SKILL.md` description field and client intake options
-5. Add 2 eval cases to `evals/evals.json`
-6. Submit a PR — contributions welcome
+```
+WEEK 1 — MEASURE
+  SOV snapshot: 20 queries × 3 platforms × 3 tests
+  GA4 AI referral channel review | GSC branded search trend
 
-### Add a New Market
-1. Copy `markets/_ADD_NEW_MARKET.md`
-2. Rename to `markets/[your-market].md`
-3. Fill all 6 sections
-4. Update `SKILL.md` description and intake options
-5. Submit a PR
+WEEK 2 — PRODUCE
+  2 content pieces (run /brief before each)
+  Schema validation | Directory updates
 
----
+WEEK 3 — EARN
+  2–3 PR pitches from /pr-brief output
+  Reddit / LinkedIn / Quora community participation
 
-## Compliance Notice
+WEEK 4 — REPORT + PLAN
+  /report → internal review → client delivery
+  Queue next month content briefs
+```
 
-This skill contains compliance guidance for regulated industries (Pharma, BFSI, Healthcare, Real Estate, Legal). This guidance is for AEO content strategy purposes only and does not constitute legal, medical, financial, or regulatory advice. Always pass content for regulated industries through your client's compliance/medico-legal review before publication.
-
----
-
-## Contributing
-
-PRs welcome for:
-- New industry vertical files
-- New market files
-- Additional eval test cases
-- Updated regulatory information
-- Platform matrix updates as AI landscape evolves
-
-Please follow the templates in `_ADD_NEW_INDUSTRY.md` and `_ADD_NEW_MARKET.md`.
+Every quarter: `/audit` refresh + `/competitor` re-run + expand query library.
 
 ---
 
-## License
+## Common Mistakes
 
-MIT License — free to use, modify, and distribute. Attribution appreciated.
+| Mistake | Fix |
+|---------|-----|
+| No client context before running modes | Always set 7-field context first — Claude uses it for compliance routing |
+| Promising results in 60 days | RAG: 4–8 weeks. Parametric: 12–18 months. Use `/explainer` to set this on Day 1 |
+| CCBot blocked in robots.txt | P1 fix, 30 minutes, removes brand from AI training data — check every new client Day 1 |
+| GA4 shows zero AI traffic = "AEO failing" | Dark social AI (WhatsApp, Copilot, private ChatGPT) has no traffic trace. Use SOV + branded search |
+
+---
+
+## Read the Full User Guide
+
+**→ [USAGE_GUIDE.md](./USAGE_GUIDE.md)** — complete walkthroughs, all 5 client scenarios fully expanded, every mode with exact inputs + sample outputs, team roles, Python API examples, 20+ FAQs.
+
+---
+
+## License & Contributing
+
+MIT license. PRs welcome for new industries, markets, updated regulatory info, and eval cases.  
+Use `_ADD_NEW_INDUSTRY.md` / `_ADD_NEW_MARKET.md` templates.
 
 ---
 
 ## Author
 
-**Indranil "Neel" Banerjee**  
-Head of AI Transformation — INT TechShu Digital  
-Building AI-powered systems for enterprise digital marketing.
-
-- LinkedIn: [linkedin.com/in/indranilbanerjee](https://linkedin.com/in/indranilbanerjee)  
-- GitHub: [@indranilbanerjee](https://github.com/indranilbanerjee)
-
----
-
-*Built as part of the [NeelVerse](https://indranil.in) ecosystem.*
+**Indranil "Neel" Banerjee** — Head of AI Transformation, INT TechShu Digital  
+[LinkedIn](https://linkedin.com/in/indranilbanerjee) · [GitHub](https://github.com/indranilbanerjee) · [NeelVerse](https://indranil.in)
