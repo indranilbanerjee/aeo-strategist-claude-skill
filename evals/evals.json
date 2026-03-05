@@ -1,0 +1,193 @@
+{
+  "skill_name": "aeo-strategist",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need an AEO audit for our pharma client Cipla India. They've been in the market 80+ years, sell OTC and prescription drugs, their website is React SPA, and ChatGPT almost never mentions them when someone asks about respiratory health solutions in India. Their main competitor Mankind Pharma appears consistently. Run the audit.",
+      "expected_output": "Full 5-category AEO audit with pharma compliance section, JS rendering warning for React SPA, India-specific platform notes, competitor gap analysis vs Mankind Pharma, P1/P2/P3 priority gap list with effort/impact scores",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Contains all 5 audit categories: Technical, Content Extraction, Entity/Authority, Parametric vs RAG gap, Competitive displacement",
+          "type": "qualitative"
+        },
+        {
+          "text": "Flags React SPA as JS rendering risk (silent blocker for AI crawlers)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Contains pharma-specific compliance section (CDSCO, HCP vs patient content distinction)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Priority gap list has P1/P2/P3 tiers with effort/impact scores",
+          "type": "qualitative"
+        },
+        {
+          "text": "References India-specific platforms (Practo, 1mg, Bing India indexing, Google Gemini dominance)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Does NOT contain generic AEO tips without client-specific application",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write a full AEO content brief for a blog post targeting the query 'best home loan provider in India 2025' for our BFSI client HDFC Bank. They're an established brand, B2C, primarily targeting Gemini and ChatGPT.",
+      "expected_output": "8-element AEO content brief with BFSI compliance flags, answer-first opener, 6+ FAQ pairs at 40-60 words each, schema recommendation, grounding hooks, compliance warning about return/rate promises",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Contains all 8 required brief elements: queries, answer-first opener, 3+ grounding hooks, 6+ FAQ pairs, 2+ schema types, chunk structure guidance, word count, compliance section",
+          "type": "qualitative"
+        },
+        {
+          "text": "FAQ answers are 40-80 words each (within spec)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Contains BFSI compliance flag (SEBI/RBI, no specific rate promises without evidence)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Schema recommendation includes at minimum FinancialService and FAQPage types",
+          "type": "qualitative"
+        },
+        {
+          "text": "Does not contain marketing superlatives (best, leading, top) without evidential support",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My client is a SaaS company called Zoho CRM, Indian origin, global B2B market. Their competitor Salesforce dominates ChatGPT and Perplexity answers for 'best CRM for enterprise'. Build me a competitive displacement analysis and give me the fastest path to displacing Salesforce for mid-market CRM queries.",
+      "expected_output": "5-signal competitor footprint map for Salesforce, gap-vs-client table, displacement timeline, strongest anchor identification, fastest displacement path for mid-market CRM queries specifically",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Maps competitor across all 5 signal categories: earned media, directory/review presence, Wikipedia/Wikidata, Reddit, parametric strength",
+          "type": "qualitative"
+        },
+        {
+          "text": "Produces gap-vs-competitor table (side by side)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Identifies Salesforce's 'strongest anchor' (the single signal most explaining their position)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Provides realistic displacement timeline (not promises rapid results without evidence)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Displacement path is specific to mid-market CRM queries, not generic SaaS advice",
+          "type": "qualitative"
+        },
+        {
+          "text": "References SaaS-specific trust signals (G2, Gartner, Capterra, integration directories)",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Generate schema markup for the homepage of a real estate developer called Prestige Group in Bangalore, India. They build luxury residential projects, RERA registered (RERA ID: PRM/KA/RERA/1251/309/PR/170103/000001), and want to rank for 'luxury apartments Bangalore' in Gemini.",
+      "expected_output": "Valid JSON-LD with minimum 2 stacked schema types, Organization + LocalBusiness, RERA registration as identifier, sameAs entity links, Gemini-optimized with India-specific signals",
+      "files": [],
+      "assertions": [
+        {
+          "text": "JSON-LD is syntactically valid (no unclosed brackets, correct property names)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Contains minimum 2 schema types stacked (Organization + LocalBusiness or similar)",
+          "type": "qualitative"
+        },
+        {
+          "text": "RERA registration number included as identifier or hasCredential",
+          "type": "qualitative"
+        },
+        {
+          "text": "Contains sameAs entity linking (LinkedIn + at least one India-specific directory like MagicBricks or 99Acres)",
+          "type": "qualitative"
+        },
+        {
+          "text": "No deprecated schema properties used",
+          "type": "qualitative"
+        },
+        {
+          "text": "Real estate compliance respected (no possession date promises in schema without RERA backing)",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I need to explain AEO to the CMO of an e-commerce retail client (D2C fashion brand, India-first, B2C). They've never heard of AEO. They want to know why it matters, what they need to invest, and what happens if they ignore it. Keep it business-focused, no jargon.",
+      "expected_output": "Non-technical AEO explainer with business case framing, plain-language LLM analogy, honest timeline, investment framing, competitive risk of inaction — no jargon without translation",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Contains business case framing (revenue risk or competitive opportunity — not just technical explanation)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Contains at least one plain-language analogy for how LLMs work",
+          "type": "qualitative"
+        },
+        {
+          "text": "Honest about timeline (does not promise fast results; mentions 12+ months for deep influence)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Contains risk-of-inaction framing (what competitor captures if brand doesn't act)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Does not use unexplained jargon (any technical term used is immediately translated)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Retail-specific context applied (not generic B2B SaaS framing)",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Build a query library for Bajaj Finance, a BFSI client in India. They offer personal loans, home loans, fixed deposits, and insurance. B2C, established brand, primarily targeting Gemini and ChatGPT. Need at least 30 queries organized by intent tier with compliance flags.",
+      "expected_output": "30+ queries across 3 tiers (10+ each), each with phrasing variant, platform routing label, compliance flags for regulated query types, organized structure",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Contains minimum 30 queries total",
+          "type": "qualitative"
+        },
+        {
+          "text": "Queries distributed across all 3 tiers: decision (10+), comparison (10+), awareness (10+)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Each query has at least one phrasing variant",
+          "type": "qualitative"
+        },
+        {
+          "text": "Compliance flags present on queries involving specific rate promises, investment advice, or guaranteed returns",
+          "type": "qualitative"
+        },
+        {
+          "text": "Platform routing labels present (Parametric-likely / RAG-likely / Mixed)",
+          "type": "qualitative"
+        },
+        {
+          "text": "India-specific query phrasing (not generic US-English financial queries)",
+          "type": "qualitative"
+        }
+      ]
+    }
+  ]
+}
