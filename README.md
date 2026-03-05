@@ -276,7 +276,7 @@ Head of AI Transformation — INT TechShu Digital
 Building AI-powered systems for enterprise digital marketing.
 
 - LinkedIn: [linkedin.com/in/indranilbanerjee](https://linkedin.com/in/indranilbanerjee)  
-- GitHub: [@indranil21](https://github.com/indranil21)
+- GitHub: [@indranilbanerjee](https://github.com/indranilbanerjee)
 
 ---
 
