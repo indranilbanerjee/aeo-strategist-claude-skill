@@ -3,7 +3,7 @@
 > **The first open-source enterprise AEO skill for Claude.**  
 > Turn Claude into a fully-equipped Answer Engine Optimization strategist — with deep compliance awareness, 12 industry verticals, and 8 global markets built in.
 
-Built by **[Indranil "Neel" Banerjee](https://linkedin.com/in/indranilbanerjee)** — Head of AI Transformation, [INT TechShu Digital](https://inttechshu.com).
+Built by **[Indranil “Neel” Banerjee](https://indranil.in)** — a builder and systems thinker working across AI transformation, marketing engineering, and trustworthy human–AI workflows.
 
 ---
 
@@ -62,7 +62,9 @@ Even without execution capability, this is where the value sits:
 
 ---
 
-## How to Use Each Mode — Real Scenarios
+## How to Use Each Mode — Illustrative Scenarios
+
+> The companies and observations below are public teaching examples—not client disclosures or verified current claims. Replace every sample observation with live research before using a result in real work. No client relationship is stated or implied.
 
 ### Before Any Mode: Set Client Context
 
@@ -434,5 +436,5 @@ Use `_ADD_NEW_INDUSTRY.md` / `_ADD_NEW_MARKET.md` templates.
 
 ## Author
 
-**Indranil "Neel" Banerjee** — Head of AI Transformation, INT TechShu Digital  
-[LinkedIn](https://linkedin.com/in/indranilbanerjee) · [GitHub](https://github.com/indranilbanerjee) · [NeelVerse](https://indranil.in)
+**[Indranil “Neel” Banerjee](https://indranil.in)** — builder and systems thinker across AI transformation, marketing engineering, and trustworthy human–AI workflows.<br>
+[LinkedIn](https://www.linkedin.com/in/askneelnow/) · [GitHub](https://github.com/indranilbanerjee) · [X](https://x.com/askneelnow)

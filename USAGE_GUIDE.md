@@ -1,5 +1,7 @@
 # AEO Strategist — Complete User Guide
-## How to use every mode, with real client scenarios and step-by-step walkthroughs
+## How to use every mode, with illustrative scenarios and step-by-step walkthroughs
+
+> The companies and observations in this guide are public teaching examples—not client disclosures or verified current claims. Replace every sample observation with live research before using a result in real work. No client relationship is stated or implied.
 
 ---
 
@@ -1134,5 +1136,5 @@ A: Yes — PRs welcome. Use the `_ADD_NEW_INDUSTRY.md` or `_ADD_NEW_MARKET.md` t
 
 ---
 
-*Built by [Indranil "Neel" Banerjee](https://linkedin.com/in/indranilbanerjee) — INT TechShu Digital*  
+*Built by [Indranil “Neel” Banerjee](https://indranil.in).*<br>
 *Part of the [NeelVerse](https://indranil.in) ecosystem*
